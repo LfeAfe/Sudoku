@@ -25,6 +25,7 @@ namespace Sudoku
 
             Console.WriteLine("riga " + ControllaRiga(sudoku, 0, 0));
             Console.WriteLine("colonna " + ControllaColonna(sudoku, 0, 0));
+            Console.WriteLine("quadrato " + ControllaBlocco(sudoku, 0, 0, 0));
         }
 
         static bool ControllaRiga(Cella[,] sudoku, int riga, int numero)
@@ -60,6 +61,199 @@ namespace Sudoku
 
                 }
             }
+            return true;
+        }
+
+        static bool ControllaBlocco(Cella[,] sudoku, int x, int y, int numero)
+        {
+            int conto = 0;
+            switch (x)
+            {
+                case 0:
+                case 1:
+                case 2:
+                    switch (y)
+                    {
+                        case 0:
+                        case 1:
+                        case 2:
+                            for (int i = 0; i < 3; i++)
+                            {
+                                for (int j = 0; j < 3; j++)
+                                {
+                                    if (sudoku[i, j].contenuto == numero)
+                                    {
+                                        conto++;
+                                        if (conto > 1)
+                                        {
+                                            return false;
+                                        }
+                                    }
+                                }
+                            }
+                            break;
+                        case 3:
+                        case 4:
+                        case 5:
+                            for (int i = 0; i < 3; i++)
+                            {
+                                for (int j = 3; j < 6; j++)
+                                {
+                                    if (sudoku[i, j].contenuto == numero)
+                                    {
+                                        conto++;
+                                        if (conto > 1)
+                                        {
+                                            return false;
+                                        }
+                                    }
+                                }
+                            }
+                            break;
+                        case 6:
+                        case 7:
+                        case 8:
+                            for (int i = 0; i < 3; i++)
+                            {
+                                for (int j = 6; j < 9; j++)
+                                {
+                                    if (sudoku[i, j].contenuto == numero)
+                                    {
+                                        conto++;
+                                        if (conto > 1)
+                                        {
+                                            return false;
+                                        }
+                                    }
+                                }
+                            }
+                            break;
+                    }
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    switch (y)
+                    {
+                        case 0:
+                        case 1:
+                        case 2:
+                            for (int i = 3; i < 6; i++)
+                            {
+                                for (int j = 0; j < 3; j++)
+                                {
+                                    if (sudoku[i, j].contenuto == numero)
+                                    {
+                                        conto++;
+                                        if (conto > 1)
+                                        {
+                                            return false;
+                                        }
+                                    }
+                                }
+                            }
+                            break;
+                        case 3:
+                        case 4:
+                        case 5:
+                            for (int i = 3; i < 6; i++)
+                            {
+                                for (int j = 3; j < 6; j++)
+                                {
+                                    if (sudoku[i, j].contenuto == numero)
+                                    {
+                                        conto++;
+                                        if (conto > 1)
+                                        {
+                                            return false;
+                                        }
+                                    }
+                                }
+                            }
+                            break;
+                        case 6:
+                        case 7:
+                        case 8:
+                            for (int i = 3; i < 6; i++)
+                            {
+                                for (int j = 6; j < 9; j++)
+                                {
+                                    if (sudoku[i, j].contenuto == numero)
+                                    {
+                                        conto++;
+                                        if (conto > 1)
+                                        {
+                                            return false;
+                                        }
+                                    }
+                                }
+                            }
+                            break;
+                    }
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                    switch (y)
+                    {
+                        case 0:
+                        case 1:
+                        case 2:
+                            for (int i = 6; i < 9; i++)
+                            {
+                                for (int j = 0; j < 3; j++)
+                                {
+                                    if (sudoku[i, j].contenuto == numero)
+                                    {
+                                        conto++;
+                                        if (conto > 1)
+                                        {
+                                            return false;
+                                        }
+                                    }
+                                }
+                            }
+                            break;
+                        case 3:
+                        case 4:
+                        case 5:
+                            for (int i = 6; i < 9; i++)
+                            {
+                                for (int j = 3; j < 6; j++)
+                                {
+                                    if (sudoku[i, j].contenuto == numero)
+                                    {
+                                        conto++;
+                                        if (conto > 1)
+                                        {
+                                            return false;
+                                        }
+                                    }
+                                }
+                            }
+                            break;
+                        case 6:
+                        case 7:
+                        case 8:
+                            for (int i = 6; i < 9; i++)
+                            {
+                                for (int j = 6; j < 9; j++)
+                                {
+                                    if (sudoku[i, j].contenuto == numero)
+                                    {
+                                        conto++;
+                                        if (conto > 1)
+                                        {
+                                            return false;
+                                        }
+                                    }
+                                }
+                            }
+                            break;
+                    }
+                    break;
+            }
+            
             return true;
         }
     }
