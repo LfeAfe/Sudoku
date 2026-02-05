@@ -23,7 +23,8 @@ namespace Sudoku
                 Console.WriteLine();
             }
 
-            Console.WriteLine(ControllaRiga(sudoku, 0, 0)); 
+            Console.WriteLine("riga " + ControllaRiga(sudoku, 0, 0));
+            Console.WriteLine("colonna " + ControllaColonna(sudoku, 0, 0));
         }
 
         static bool ControllaRiga(Cella[,] sudoku, int riga, int numero)
@@ -32,6 +33,24 @@ namespace Sudoku
             for (int i = 0; i < 9; i++)
             {
                 if (sudoku[riga, i].contenuto == numero)
+                {
+                    conto++;
+                    if (conto > 1)
+                    {
+                        return false;
+                    }
+
+                }
+            }
+            return true;
+        }
+
+        static bool ControllaColonna(Cella[,] sudoku, int colonna, int numero)
+        {
+            int conto = 0;
+            for (int i = 0; i < 9; i++)
+            {
+                if (sudoku[i, colonna].contenuto == numero)
                 {
                     conto++;
                     if (conto > 1)
