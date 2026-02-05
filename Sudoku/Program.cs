@@ -13,8 +13,8 @@ namespace Sudoku
             // menu start: visualizzazione scelte
 
             Console.WriteLine("Welcome to Sudoku!"); 
-            Console.WriteLine("1 - inizia"); 
-            Console.WriteLine("2 - esci");
+            Console.WriteLine("1 - Inizia"); 
+            Console.WriteLine("2 - Esci");
             Console.Write("Scegli un'opzione: ");
             string scelta = Console.ReadLine(); //lettura della scelta dell'utente
 
@@ -43,27 +43,27 @@ namespace Sudoku
                 Console.Write("Inserisci la riga (1-9): "); //richiesta della riga
                 if (int.TryParse(Console.ReadLine(), out riga) && riga >= 1 && riga <= 9) //definizione che il valore dovrà essere tra 1 e 9
                     break;
-                Console.WriteLine("valore non valido"); //errore se il numero non è 1 o 9
+                Console.WriteLine("Valore non valido"); //errore se il numero non è 1 o 9
                
             }
             //i seguenti cicli fanno le stesse cose ma per colonna e numero
             while (true)
             {
-                Console.Write("inserisci la colonna (1-9): ");
+                Console.Write("Inserisci la colonna (1-9): ");
                 if (int.TryParse(Console.ReadLine(), out colonna) && colonna >= 1 && colonna <= 9)
                     break;
-                Console.WriteLine("valore non valido");
+                Console.WriteLine("Valore non valido");
             }
 
             while (true)
             {
-                Console.Write("inserisci il numero (1-9): ");
+                Console.Write("Inserisci il numero (1-9): ");
                 if (int.TryParse(Console.ReadLine(), out numero) && numero >= 1 && numero <= 9)
                     break;
-                Console.WriteLine("valore non valido");
+                Console.WriteLine("Valore non valido");
             }
-            
-     
+
+            Console.ReadKey(); //pausa per vedere i risultati prima della chiusura del programma
         }
 
        
