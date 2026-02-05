@@ -22,6 +22,26 @@ namespace Sudoku
                 }
                 Console.WriteLine();
             }
+
+            Console.WriteLine(ControllaRiga(sudoku, 0, 0)); 
+        }
+
+        static bool ControllaRiga(Cella[,] sudoku, int riga, int numero)
+        {
+            int conto = 0;
+            for (int i = 0; i < 9; i++)
+            {
+                if (sudoku[riga, i].contenuto == numero)
+                {
+                    conto++;
+                    if (conto > 1)
+                    {
+                        return false;
+                    }
+
+                }
+            }
+            return true;
         }
     }
 }
