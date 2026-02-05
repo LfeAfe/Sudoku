@@ -11,7 +11,7 @@ namespace Sudoku
         static void Main(string[] args)
         {
             // menu start
-        
+
             Console.WriteLine("Welcome to Sudoku!");
             Console.WriteLine("1 - inizia");
             Console.WriteLine("2 - esci");
@@ -33,8 +33,42 @@ namespace Sudoku
                 Console.WriteLine("Opzione non valida. Riprova.");
             }
 
+            int riga;
+            int colonna;
+            int numero;
+
+
+            while (true) 
+            {
+                Console.Write("Inserisci la riga (1-9): ");
+                if (int.TryParse(Console.ReadLine(), out riga) && riga >= 1 && riga <= 9)
+                    break;
+                Console.WriteLine("valore non valido");
+               
+            }
+
+            while (true)
+            {
+                Console.Write("inserisci la colonna (1-9): ");
+                if (int.TryParse(Console.ReadLine(), out colonna) && colonna >= 1 && colonna <= 9)
+                    break;
+                Console.WriteLine("valore non valido");
+            }
+
+            while (true)
+            {
+                Console.Write("inserisci il numero (1-9): ");
+                if (int.TryParse(Console.ReadLine(), out numero) && numero >= 1 && numero <= 9)
+                    break;
+                Console.WriteLine("valore non valido");
+            }
+            
+        
+        
+        }
+
 
 
         }
     }
-}
+
