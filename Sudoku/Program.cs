@@ -25,7 +25,7 @@ namespace Sudoku
 
             Console.WriteLine("riga " + ControllaRiga(sudoku, 0, 0));
             Console.WriteLine("colonna " + ControllaColonna(sudoku, 0, 0));
-            Console.WriteLine("quadrato " + ControllaBlocco(sudoku, 0, 0, 0));
+            Console.WriteLine("quadrato " + ControllaQuadrato(sudoku, 0, 0, 0));
         }
 
         static bool ControllaRiga(Cella[,] sudoku, int riga, int numero)
@@ -64,7 +64,28 @@ namespace Sudoku
             return true;
         }
 
-        static bool ControllaBlocco(Cella[,] sudoku, int x, int y, int numero)
+        static bool ControllaQuadrato(Cella[,] sudoku, int riga, int colonna, int numero)
+        {
+            int conto = 0;
+            int startRow = (riga / 3) * 3;
+            int startCol = (colonna / 3) * 3;
+            for (int i = startRow; i < startRow + 3; i++)
+            {
+                for (int j = startCol; j < startCol + 3; j++)
+                {
+                    if (sudoku[i, j].contenuto == numero)
+                    {
+                        conto++;
+                        if (conto > 1)
+                        {
+                            return false;
+                        }
+                    }
+                }
+            }
+            return true;
+        }
+        /*static bool ControllaBlocco(Cella[,] sudoku, int x, int y, int numero)
         {
             int conto = 0;
             switch (x)
@@ -255,6 +276,6 @@ namespace Sudoku
             }
             
             return true;
-        }
+        }*/
     }
 }
