@@ -66,6 +66,62 @@ namespace Sudoku
             sudoku[3,7] = new Cella(0, true);
             sudoku[3,8] = new Cella(3, false);
 
+            sudoku[4,0] = new Cella(4, false);
+            sudoku[4,1] = new Cella(0, true);
+            sudoku[4,2] = new Cella(0, true);
+            sudoku[4,3] = new Cella(8, false);
+            sudoku[4,4] = new Cella(0, true);
+            sudoku[4,5] = new Cella(3, false);
+            sudoku[4,6] = new Cella(0, true);
+            sudoku[4,7] = new Cella(0, true);
+            sudoku[4,8] = new Cella(1, false);
+
+            sudoku[5,0] = new Cella(7, false);
+            sudoku[5,1] = new Cella(0, true);
+            sudoku[5,2] = new Cella(0, true);
+            sudoku[5,3] = new Cella(0, true);
+            sudoku[5,4] = new Cella(2, false);
+            sudoku[5,5] = new Cella(0, true);
+            sudoku[5,6] = new Cella(0, true);
+            sudoku[5,7] = new Cella(0, true);
+            sudoku[5,8] = new Cella(6, false);
+
+            sudoku[6,0] = new Cella(0, true);
+            sudoku[6,1] = new Cella(6, false);
+            sudoku[6,2] = new Cella(0, true);
+            sudoku[6,3] = new Cella(0, true);
+            sudoku[6,4] = new Cella(0, true);
+            sudoku[6,5] = new Cella(0, true);
+            sudoku[6,6] = new Cella(2, false);
+            sudoku[6,7] = new Cella(8, false);
+            sudoku[6,8] = new Cella(0, true);
+
+            sudoku[7,0] = new Cella(0, true);
+            sudoku[7,1] = new Cella(0, true);
+            sudoku[7,2] = new Cella(0, true);
+            sudoku[7,3] = new Cella(4, false);
+            sudoku[7,4] = new Cella(1, false);
+            sudoku[7,5] = new Cella(9, false);
+            sudoku[7,6] = new Cella(0, true);
+            sudoku[7,7] = new Cella(0, true);
+            sudoku[7,8] = new Cella(5, false);
+
+            sudoku[8,0] = new Cella(0, true);
+            sudoku[8,1] = new Cella(0, true);
+            sudoku[8,2] = new Cella(0, true);
+            sudoku[8,3] = new Cella(0, true);
+            sudoku[8,4] = new Cella(8, false);
+            sudoku[8,5] = new Cella(0, true);
+            sudoku[8,6] = new Cella(0, true);
+            sudoku[8,7] = new Cella(7, false);
+            sudoku[8,8] = new Cella(9, false);
+
+
+            
+
+
+
+
 
             for (int i = 0; i < 9; i++)
             {
